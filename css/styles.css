@@ -163,6 +163,7 @@ img {
 .hero-banner {
   background-color: #2e2f42;
   height: 600px;
+  padding-top: 188px;
 }
 .hero-banner-title {
   font-weight: 700;
@@ -171,18 +172,17 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  padding-top: 188px;
   padding-bottom: 48px;
   margin-bottom: 48px;
   margin-left: auto;
   margin-right: auto;
-  width: 496px;
+  max-width: 496px;
 }
 
 .hero-banner-batton {
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   font-weight: 500;
@@ -191,10 +191,10 @@ img {
   letter-spacing: 0.04em;
   color: #fff;
   background-color: #4d5ae5;
-  white-space: nowrap;
-  display: flex;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  border: none;
 }
 .hero-banner-batton:hover,
 .hero-banner-batton:focus {
@@ -204,18 +204,19 @@ img {
 
 /* principles start */
 
+.principles {
+  padding: 120px 0;
+}
+
 .principles-list {
   display: flex;
   gap: 24px;
-  padding-bottom: 107px;
-  padding-top: 98px;
 }
 .principles-name {
-  padding-bottom: 8px;
-  padding-top: 26px;
+  margin-bottom: 8px;
 }
 .principles-list-item {
-  width: calc((100%-72) / 4);
+  width: calc((100%-72px) / 4);
   max-width: 264px;
 }
 
@@ -233,20 +234,22 @@ img {
 
 .team-list-item {
   background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+}
+.team-list-item-text {
+  padding: 32px 0;
 }
 .team-title {
   text-transform: capitalize;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 .team-role {
   text-align: center;
   font-size: 16px;
-  padding-top: 8px;
-  padding-bottom: 32px;
 }
 .team-name {
   text-align: center;
-  padding-top: 32px;
+  margin-bottom: 8px;
 }
 /* section team end */
 
@@ -254,10 +257,11 @@ img {
 
 .portfolio-list-item {
   background-color: #ffffff;
+  width: calc((100% - 48px) / 3);
 }
 .portfolio-title {
   text-transform: capitalize;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .portfolio-list {
@@ -267,13 +271,15 @@ img {
   column-gap: 24px;
 }
 .portfolio-description {
-  padding-top: 32px;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
-.portfolio-specialization {
-  padding-bottom: 32px;
+.portfolio-list-item-text {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
+
 /* porfolio end */
 
 /* footer start */
@@ -283,8 +289,8 @@ img {
   padding-bottom: 100px;
 }
 .footer-logo {
-  display: block;
-  padding-bottom: 16px;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 .footer-logo .logo-part {
   color: #f4f4fd;
