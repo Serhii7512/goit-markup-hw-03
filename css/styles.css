@@ -7,6 +7,8 @@ body {
 ul,
 ol {
   list-style-type: none;
+  padding-left: 0;
+  margin: 0;
 }
 a {
   text-decoration: none;
@@ -21,6 +23,17 @@ a {
 
 button {
   cursor: pointer;
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 h2 {
   font-weight: 700;
@@ -42,7 +55,52 @@ p {
   letter-spacing: 0.02em;
   color: #434455;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 /* navigation section start */
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+  display: flex;
+}
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -52,11 +110,24 @@ p {
   text-transform: uppercase;
   color: #4d5ae5;
 }
+
+.header-logo {
+  padding: 24px 0;
+  margin-right: 76px;
+}
+
 .header-logo .logo-part {
   color: #2e2f42;
 }
 
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .nav-list-item-link {
+  padding: 24px 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -66,13 +137,23 @@ p {
 
 .contacts {
   font-style: normal;
+  margin-left: auto;
+}
+
+.contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .contacts-list-item-link {
+  display: block;
+  padding: 24px 0;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  display: block;
 }
 
 /* navigation section end */
@@ -81,6 +162,7 @@ p {
 
 .hero-banner {
   background-color: #2e2f42;
+  height: 600px;
 }
 .hero-banner-title {
   font-weight: 700;
@@ -89,15 +171,30 @@ p {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  padding-top: 188px;
+  padding-bottom: 48px;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 496px;
 }
 
 .hero-banner-batton {
+  border-radius: 4px;
+  padding: 16px 32px;
+  width: 169px;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
   background-color: #4d5ae5;
+  white-space: nowrap;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-banner-batton:hover,
 .hero-banner-batton:focus {
@@ -105,10 +202,33 @@ p {
 }
 /* hero banner end */
 
+/* principles start */
+
+.principles-list {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 107px;
+  padding-top: 98px;
+}
+.principles-name {
+  padding-bottom: 8px;
+  padding-top: 26px;
+}
+.principles-list-item {
+  width: calc((100%-72) / 4);
+  max-width: 264px;
+}
+
+/* principles end */
+
 /* section team start */
 
 .team {
   background-color: #f4f4fd;
+}
+.team-list {
+  display: flex;
+  gap: 24px;
 }
 
 .team-list-item {
@@ -116,13 +236,17 @@ p {
 }
 .team-title {
   text-transform: capitalize;
+  padding-bottom: 72px;
 }
 .team-role {
   text-align: center;
   font-size: 16px;
+  padding-top: 8px;
+  padding-bottom: 32px;
 }
 .team-name {
   text-align: center;
+  padding-top: 32px;
 }
 /* section team end */
 
@@ -133,17 +257,40 @@ p {
 }
 .portfolio-title {
   text-transform: capitalize;
+  padding-bottom: 72px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+.portfolio-description {
+  padding-top: 32px;
+  padding-bottom: 8px;
+}
+
+.portfolio-specialization {
+  padding-bottom: 32px;
 }
 /* porfolio end */
 
 /* footer start */
 .page-footer {
   background-color: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.footer-logo {
+  display: block;
+  padding-bottom: 16px;
 }
 .footer-logo .logo-part {
   color: #f4f4fd;
 }
 .footer-text {
   color: #f4f4fd;
+  width: 264px;
 }
 /* footer end */
