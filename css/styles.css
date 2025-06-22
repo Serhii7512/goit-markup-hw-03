@@ -163,7 +163,7 @@ img {
 .hero-banner {
   background-color: #2e2f42;
   height: 600px;
-  padding-top: 188px;
+  padding: 188px 0;
 }
 .hero-banner-title {
   font-weight: 700;
